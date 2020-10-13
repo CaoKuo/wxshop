@@ -12,3 +12,7 @@ page,view,text,swiper,swiper-item,image,navigator{
 page {
     --themeColor: #eb4450;
 }
+
+image {
+  width: 100%;
+}
