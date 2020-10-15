@@ -12,6 +12,6 @@
     </view>
 
     <view class="tabs_content">
-        <slot></slot>>
+        <slot></slot>
     </view>
 </view>
