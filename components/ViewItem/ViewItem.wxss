@@ -1,0 +1,19 @@
+.item {
+    width: 100%;
+    background-color: #fff;
+    padding: 20rpx;
+    border-radius: 10rpx;
+}
+
+.double {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1rpx solid #ddd;
+    padding: 20rpx;
+    border-radius: 10rpx;
+    border-bottom: 1rpx solid #ddd;
+}
+
+.double .info_right {
+    float: right;
+}

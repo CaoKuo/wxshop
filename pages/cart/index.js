@@ -1,4 +1,4 @@
-import { getSetting, chooseAddress, openSetting, showModal } from "../../utils/asyncWx"
+import { getSetting, chooseAddress, openSetting, showModal, showToast } from "../../utils/asyncWx"
 // pages/cart/index.js
 Page({
 
@@ -40,7 +40,6 @@ Page({
       }
       // 获取收获地址
       let address = await chooseAddress();
-      console.log(address)
       address.all = address.provinceName + address.cityName + address.countyName + address.detailInfo;
       // 将获得的地址存储至缓存中
       wx.setStorageSync('address', address);
@@ -122,4 +121,21 @@ Page({
   },
 
   // 结算功能的实现
+  async handlePay() {
+    // 判断用户有没有选中收货地址
+    const { address, totalNum } = this.data;
+    if(!address.userName) {
+      await showToast({ title: "您还没有选择收货地址" });
+      return;
+    }
+    // 判断用户有没有选中商品
+    if(totalNum === 0) {
+      await showToast({ title: "您还没有选购商品" });
+      return;
+    }
+
+    wx.navigateTo({
+      url: '/pages/pay/index'
+    });
+  }
 })

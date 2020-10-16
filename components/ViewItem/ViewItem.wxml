@@ -1,0 +1,20 @@
+<view>
+    <view wx:if="{{ !ItemContent.url }}">
+        <view class="item" wx:if="{{ !ItemContent.right }}">
+            <view>
+                {{ ItemContent.left }}
+            </view>
+        </view>
+        <view wx:else>
+            <view class="double">
+                <text class="">{{ ItemContent.left }}</text>
+                <text class="info_right">{{ ItemContent.right }}</text>
+            </view>
+        </view>
+    </view>
+    <view wx:else>
+        <navigator class="double" url="{{ ItemContent.url }}" hover-class="navigator-hover" open-type="navigate">
+            {{ ItemContent.left }}
+        </navigator>
+    </view>
+</view>

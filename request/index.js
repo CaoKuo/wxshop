@@ -2,13 +2,18 @@
 let ajaxTimes = 0;
 const baseUrl = 'https://api-hmugo-web.itheima.net/api/public/v1';
 export const request = (param) => {
+    // 判断url中是否带有 /my/ 请求的是私有的路径 带上header token
+    let header = {...param.header};
+    if(param.url.includes('/my/')){
+        // 拼接header 带上token
+        header['Authorization'] = wx.getStorageSync('token');
+    }
     ajaxTimes ++;
     // 显示加载中效果
     wx.showLoading({
         title: "加载中",
         mask: true
     });
-    let header = {...param.header};
     return new Promise((resolve, reject) => {
         wx.request({
             ...param,
