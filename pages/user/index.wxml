@@ -22,7 +22,7 @@
         <view class="his_name">收藏店铺</view>
       </navigator>
       <navigator url="/pages/collect/index">
-        <view class="his_num">0</view>
+        <view class="his_num">{{ collectNums }}</view>
         <view class="his_name">收藏商品</view>
       </navigator>
       <navigator>

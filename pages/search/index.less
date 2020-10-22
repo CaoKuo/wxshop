@@ -1,0 +1,40 @@
+page {
+    background-color: #dedede;
+    padding: 20rpx;
+}
+
+.search_row {
+    height: 60rpx;
+    display: flex;
+    input {
+        flex: 1;
+        height: 100%;
+        padding-left: 30rpx;
+        background-color: #fff;
+    }
+    button {
+        height: 100%;
+        font-size: 26rpx;
+        width: 80rpx !important;
+        margin: 0 10rpx !important;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        
+}
+
+.search_content {
+    margin-top: 30rpx;
+    .search_item {
+        background-color: #fff;
+        font-size: 26rpx;
+        padding: 15rpx 10rpx;
+        border-bottom: 1rpx solid #ccc;
+
+        overflow: hidden;           //让文本呈现一行，并在末尾超出部分实现...
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

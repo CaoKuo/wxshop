@@ -6,6 +6,8 @@ Page({
    */
   data: {
     userinfo: {},
+    // 收藏商品数量
+    collectNums: 0,
     address: { left: "收货地址管理" },
     contact: { left: "联系客服", right: "400-618-4000"},
     advice: { left: "意见反馈", url: "/pages/feedback/index" },
@@ -18,8 +20,10 @@ Page({
    */
   onShow: function () {
     const userinfo = wx.getStorageSync("userinfo");
+    const collect = wx.getStorageSync("collect") || [];
     this.setData({
-      userinfo
+      userinfo,
+      collectNums: collect.length
     })
   }
 })

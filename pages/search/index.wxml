@@ -1,2 +1,17 @@
-<!--pages/search/index.wxml-->
-<text>pages/search/index.wxml</text>
+<view class="search_row">
+    <input placeholder="请输入您要搜索的商品名称"/>
+    <button>取消</button>
+</view>
+
+<view class="search_content">
+    <view class="search_item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptas possimus! Illum quasi facere dolor nihil laudantium tempore aspernatur ex sunt accusamus deserunt quas ullam minima, quidem eveniet ratione ducimus.
+    </view>
+    <view class="search_item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptas possimus! Illum quasi facere dolor nihil laudantium tempore aspernatur ex sunt accusamus deserunt quas ullam minima, quidem eveniet ratione ducimus.
+    </view>
+    <view class="search_item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, voluptas possimus! Illum quasi facere dolor nihil laudantium tempore aspernatur ex sunt accusamus deserunt quas ullam minima, quidem eveniet ratione ducimus.
+    </view>
+</view>
+
