@@ -42,6 +42,7 @@ Page({
   onLoad: function (options) {
     this.QueryParams.cid = options.cid || '';
     this.QueryParams.query = options.query || '';
+    console.log(this.QueryParams.query)
     this.getGoodsList();
   },
 
